@@ -1,0 +1,53 @@
+// break-point-vars
+$breakpoint-wrap: $wrap-width - 1px ;
+
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 599px;
+
+$breakpoint-laptop-max: 1280px;
+$breakpoint-laptop-min: 960px;
+$breakpoint-tablet-max: 959px;
+$breakpoint-tablet-min: 600px;
+$breakpoint-mobile-max: 599px;
+
+// lab mobile-first
+$wrap-less: $wrap-width - 1px;
+$tab-orless: 960px - 1px;
+$mobile-orless: 600px - 1px;
+
+// lab pc-first
+$pc: $wrap-width;
+$tab: 960px;
+$mobile: 600px;
+
+// sample mq
+// .hoge {
+//   font-size: 20px;
+//   @include max-screen($breakpoint-tablet) {
+//     font-size: 18px;
+//   }
+//   @include max-screen($breakpoint-mobile) {
+//     font-size: 16px;
+//   }
+//   @include screen($breakpoint-mobile, $breakpoint-tablet) {
+//     font-size: 16px;
+//   }
+// }
+
+@mixin mqmax($break-point) {
+	@media only screen and (max-width: $break-point) {
+		@content;
+	}
+}
+
+@mixin mqmin($break-point) {
+	@media only screen and (min-width: $break-point) {
+		@content;
+	}
+}
+
+@mixin mq($break-point-min, $break-point-max) {
+	@media only screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+		@content;
+	}
+}

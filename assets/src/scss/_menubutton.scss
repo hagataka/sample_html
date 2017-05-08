@@ -1,0 +1,177 @@
+.menuButtonOuter {
+	width: 44px;
+	/*position: relative;*/
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#menuButton {
+    display: block;
+    width: 42px;
+    height: 42px;
+    /*position: fixed;*/
+	position: absolute;
+    top: .5em;
+    left: .5em;
+	/*position: relative;*/
+    z-index: 99;
+
+	&::after {
+		color: $menubutton-color;
+		content: "MENU";
+		width: 100%;
+		text-align: center;
+		font-size: .5rem;
+		position: absolute;
+		left: 0;
+		bottom: -.75em;
+	}
+	&.active::after {
+		content: "CLOSE";
+	}
+	span {
+	    display: block;
+		background-color: $menubutton-color;
+	    width: 24px;
+	    height: 2px;
+	    position: absolute;
+	    left: 9px;
+	    transition: all 0.4s;
+
+		&:first-child {
+		    top: 12px;
+		}
+		&:nth-child(2) {
+		    margin-top: -1px;
+		    top: 50%;
+		}
+		&:last-child {
+		    bottom: 12px;
+		}
+	}
+}
+
+#menuButton.active {
+	span {
+		&:first-child {
+		    transform: translateY(8px) rotate(45deg);
+		}
+		&:nth-child(2) {
+		    opacity: 0;
+		}
+		&:last-child {
+		    transform: translateY(-8px) rotate(-45deg);
+		}
+	}
+}
+
+/*@media only screen and (max-width: 991px) {*/
+@media only screen and (max-width: 999px) {
+	header nav {
+		display: none;
+	}
+	header nav.active {
+		display: block;
+	}
+	header nav.active li > a {
+		display: block;
+		height: 2.75em;
+		line-height: 2.75em;
+
+		// -moz-animation-name: gnav_ani_a;
+		// -moz-animation-duration: .4s;
+		// -moz-animation-timing-function: ease-out;
+		//
+		// -webkit-animation-name: gnav_ani_a;
+		// -webkit-animation-duration: .4s;
+		// -webkit-animation-timing-function: ease-out;
+		//
+		// -o-animation-name: gnav_ani_a;
+		// -o-animation-duration: .4s;
+		// -o-animation-timing-function: ease-out;
+		//
+		// -ms-animation-name: gnav_ani_a;
+		// -ms-animation-duration: .4s;
+		// -ms-animation-timing-function: ease-out;
+
+		animation-name: gnav_ani_a;
+		animation-duration: .4s;
+		animation-timing-function: ease-out;
+	}
+	// @-moz-keyframes gnav_ani_a {
+	// 	0% {opacity: 0; height: 0; -moz-transform: translate(-4.5em, -1.5em);}
+	// 	65% {opacity: 0; -moz-transform: translate(-4.5em, -1.5em);}
+	// 	100% {opacity: 1; height: 2.75em; -moz-transform: translate(0em, 0em);}
+	// }
+	// @-webkit-keyframes gnav_ani_a {
+	// 	0% {opacity: 0; height: 0; -webkit-transform: translate(-4.5em, -1.5em);}
+	// 	65% {opacity: 0; -webkit-transform: translate(-4.5em, -1.5em);}
+	// 	100% {opacity: 1; height: 2.75em; -webkit-transform: translate(0em, 0em);}
+	// }
+	// @-o-keyframes gnav_ani_a {
+	// 	0% {opacity: 0; height: 0; -o-transform: translate(-4.5em, -1.5em);}
+	// 	65% {opacity: 0; -o-transform: translate(-4.5em, -1.5em);}
+	// 	100% {opacity: 1; height: 2.75em; -o-transform: translate(0em, 0em);}
+	// }
+	// @-ms-keyframes gnav_ani_a {
+	// 	0% {opacity: 0; height: 0; -ms-transform: translate(-4.5em, -1.5em);}
+	// 	65% {opacity: 0; -ms-transform: translate(-4.5em, -1.5em);}
+	// 	100% {opacity: 1; height: 2.75em; -ms-transform: translate(0em, 0em);}
+	// }
+	@keyframes gnav_ani_a {
+		0% {opacity: 0; height: 0; transform: translate(-4.5em, -1.5em);}
+		65% {opacity: 0; transform: translate(-4.5em, -1.5em);}
+		100% {opacity: 1; height: 2.75em; transform: translate(0em, 0em);}
+	}
+	header nav.active li > span {
+		display: block;
+		height: 1.25em;
+		line-height: 1.25em;
+
+	    // -moz-animation-name: gnav_ani_span;
+	    // -moz-animation-duration: .4s;
+	    // -moz-animation-timing-function: ease-out;
+		//
+	    // -webkit-animation-name: gnav_ani_span;
+	    // -webkit-animation-duration: .4s;
+	    // -webkit-animation-timing-function: ease-out;
+		//
+	    // -o-animation-name: gnav_ani_span;
+	    // -o-animation-duration: .4s;
+	    // -o-animation-timing-function: ease-out;
+		//
+	    // -ms-animation-name: gnav_ani_span;
+	    // -ms-animation-duration: .4s;
+	    // -ms-animation-timing-function: ease-out;
+
+	    animation-name: gnav_ani_span;
+	    animation-duration: .4s;
+	    animation-timing-function: ease-out;
+	}
+	// @-moz-keyframes gnav_ani_span {
+	//     50% {opacity: 0; -moz-transform: translate(-4.5em, -1.5em);}
+	//     100% {opacity: 1; height: 1.25em; -moz-transform: translate(0em, 0em);}
+	// }
+	// @-webkit-keyframes gnav_ani_span {
+	//     50% {opacity: 0; -webkit-transform: translate(-4.5em, -1.5em);}
+	//     100% {opacity: 1; height: 1.25em; -webkit-transform: translate(0em, 0em);}
+	// }
+	// @-o-keyframes gnav_ani_span {
+	//     50% {opacity: 0; -o-transform: translate(-4.5em, -1.5em);}
+	//     100% {opacity: 1; height: 1.25em; -o-transform: translate(0em, 0em);}
+	// }
+	// @-ms-keyframes gnav_ani_span {
+	//     50% {opacity: 0; -ms-transform: translate(-4.5em, -1.5em);}
+	//     100% {opacity: 1; height: 1.25em; -ms-transform: translate(0em, 0em);}
+	// }
+	@keyframes gnav_ani_span {
+	    50% {opacity: 0; transform: translate(-4.5em, -1.5em);}
+	    100% {opacity: 1; height: 1.25em; transform: translate(0em, 0em);}
+	}
+}
+/*** For PC (min992) ***/
+@media only screen and (min-width: 1000px) {
+	.menuButtonOuter {
+		display: none;
+	}
+}

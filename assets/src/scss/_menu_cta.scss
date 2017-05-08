@@ -1,0 +1,146 @@
+/********************
+新ボタン
+*********************/
+#menu_cta {
+	display: block;
+	width: 100%;
+
+	-webkit-tap-highlight-color: transparent;
+	// background-color: #f5f5f5;
+	// background: linear-gradient(-45deg, rgba(246, 255, 0, .4), rgba(255, 0, 161, .4));
+}
+#menu_cta .chevron-wrap {
+	cursor: pointer;
+	display: block;
+	overflow: hidden;
+	width: 40px;
+	height: 48px;
+	-webkit-tap-highlight-color: transparent;
+	margin: auto;
+	// background: #ccc;
+	padding-left: 4.5em;
+	position: relative;
+}
+#menu_cta .chevron-wrap::before {
+  content: 'MENU';
+  position: absolute;
+  left: 1em;
+  top: 0;
+  height: 48px;
+  line-height: 48px;
+  letter-spacing: .1em;
+  transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+#menu_cta .chevron-wrap::after {
+  content: 'CLOSE';
+  position: absolute;
+  left: 1em;
+  top: 100%;
+  height: 48px;
+  line-height: 48px;
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+#menu_cta .chevron-wrap.active::before {
+  top: -100%;
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+#menu_cta .chevron-wrap.active::after {
+  top: 0;
+  opacity: 1;
+  transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+// for text_hide
+#menu_cta .chevron-wrap {
+	transition: padding 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+header:not(.below_fv) #menu_cta .chevron-wrap {
+	padding-left: 0;
+}
+#menu_cta .chevron-wrap::before,
+#menu_cta .chevron-wrap::after {
+	animation: chevron-wrap-text-scroll-ani 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+@keyframes chevron-wrap-text-scroll-ani {
+	0%,50% { opacity: 0; }
+	100% { opacity: 1; }
+};
+header:not(.below_fv) #menu_cta .chevron-wrap::before,
+header:not(.below_fv) #menu_cta .chevron-wrap::after,
+header:not(.below_fv) #menu_cta .chevron-wrap.active::before,
+header:not(.below_fv) #menu_cta .chevron-wrap.active::after {
+	display: none;
+}
+// __for text hide
+
+#menu_cta .chevron-wrap .chevron {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	-webkit-transition: -webkit-transform 1s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform-origin 1s cubic-bezier(0.86, 0, 0.07, 1);
+	transition: -webkit-transform 1s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform-origin 1s cubic-bezier(0.86, 0, 0.07, 1);
+	transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1), transform-origin 1s cubic-bezier(0.86, 0, 0.07, 1);
+	transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1), transform-origin 1s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 1s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform-origin 1s cubic-bezier(0.86, 0, 0.07, 1), -ms-transform-origin 1s cubic-bezier(0.86, 0, 0.07, 1);
+	-webkit-transform: translateY(10%);
+	-ms-transform: translateY(10%);
+	transform: translateY(10%);
+}
+#menu_cta .chevron-wrap.active .chevron {
+	-webkit-transform: translateY(-10%);
+	-ms-transform: translateY(-10%);
+	transform: translateY(-10%);
+}
+#menu_cta .chevron-wrap .chevron::before,
+#menu_cta .chevron-wrap .chevron::after {
+	content: "";
+	display: block;
+	background: #333;
+	position: absolute;
+	top: 50%;
+	width: 12px;
+	height: 1px;
+	z-index: 1;
+	-webkit-transition: -webkit-transform 1s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform-origin 1s cubic-bezier(0.86, 0, 0.07, 1);
+	transition: -webkit-transform 1s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform-origin 1s cubic-bezier(0.86, 0, 0.07, 1);
+	transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1), transform-origin 1s cubic-bezier(0.86, 0, 0.07, 1);
+	transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1), transform-origin 1s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 1s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform-origin 1s cubic-bezier(0.86, 0, 0.07, 1), -ms-transform-origin 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+#menu_cta .chevron-wrap .chevron::before {
+	right: 50%;
+	-webkit-transform-origin: 100% 100%;
+	-ms-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+	-webkit-transform: rotate(40deg) scaleY(1.5);
+	-ms-transform: rotate(40deg) scaleY(1.5);
+	transform: rotate(40deg) scaleY(1.5);
+}
+#menu_cta .chevron-wrap .chevron::after {
+	left: 50%;
+	-webkit-transform-origin: 0% 100%;
+	-ms-transform-origin: 0% 100%;
+	transform-origin: 0% 100%;
+	-webkit-transform: rotate(-40deg) scaleY(1.5);
+	-ms-transform: rotate(-40deg) scaleY(1.5);
+	transform: rotate(-40deg) scaleY(1.5);
+}
+
+#menu_cta .chevron-wrap.active .chevron::before {
+	-webkit-transform-origin: 100% 0%;
+	-ms-transform-origin: 100% 0%;
+	transform-origin: 100% 0%;
+	-webkit-transform: rotate(-40deg) scaleY(1.5);
+	-ms-transform: rotate(-40deg) scaleY(1.5);
+	transform: rotate(-40deg) scaleY(1.5);
+}
+#menu_cta .chevron-wrap.active .chevron::after {
+	-webkit-transform-origin: 0% 0%;
+	-ms-transform-origin: 0% 0%;
+	transform-origin: 0% 0%;
+	-webkit-transform: rotate(40deg) scaleY(1.5);
+	-ms-transform: rotate(40deg) scaleY(1.5);
+	transform: rotate(40deg) scaleY(1.5);
+}

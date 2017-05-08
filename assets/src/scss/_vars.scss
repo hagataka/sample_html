@@ -1,0 +1,56 @@
+// $wrap-width: 1000px;
+// $wrap-width-slim: 960px;
+// $wrap-width-wide: 1336px;
+
+$wrap-width: 1280px;
+$wrap-width-slim: 1000px;
+$wrap-width-wide: 1336px;
+
+$fv-height: 392px;
+$base-color: #aa443f;
+
+// header
+$header-bg-color: #000;
+$menubutton-color: #fff;
+
+// footer
+$footer-bg-color: #000;
+
+$img_path: '../images/';
+// .sample{
+//     background: url(#{$img_path}bg_img.png) 0 0 no-repeat;
+// }
+
+// font
+// ----------------------------------------
+$font-yugo: Quicksand, 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+
+$font-apple: -apple-system,'Lucida Grande','Helvetica Neue','Hiragino Kaku Gothic ProN','游ゴシック','メイリオ',meiryo,sans-serif;
+
+$font-apple-yugo: -apple-system, Quicksand, 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', 'Lucida Grande','Helvetica Neue', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+
+$font-min: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+
+$font-Rounded_Mplus_1c: "Rounded Mplus 1c", "Mplus 1p", -apple-system,'Lucida Grande','Helvetica Neue','Hiragino Kaku Gothic ProN','游ゴシック','メイリオ',meiryo,sans-serif;
+
+$font-Mplus_1p: "Mplus 1p", "Rounded Mplus 1c", -apple-system,'Lucida Grande','Helvetica Neue','Hiragino Kaku Gothic ProN','游ゴシック','メイリオ',meiryo,sans-serif;
+
+// ----------------------------------------
+// $font: $font-apple-yugo;
+$font: $font-Mplus_1p;
+
+// ----------------------------------------
+// ----------------------------------------
+
+
+// colors
+// ----------------------------------------
+$rb-color1: #F5B090;
+$rb-color2: #FCD7A1;
+$rb-color3: #FFF9B1;
+$rb-color4: #A5D4AD;
+$rb-color5: #A3BCE2;
+$rb-color6: #A59ACA;
+$rb-color7: #CFA7CD;
+
+$greenery: #88B04B;
